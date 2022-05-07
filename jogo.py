@@ -74,7 +74,7 @@ def InicializaChute(lista_palavra_secreta,palavra_secreta):
         chute = RealizaChute()
         lista_chutes.append(chute)
         print('Chutes: ',lista_chutes)
-        if Acertou(chute,lista_palavra_secreta) == True:
+        if Acertou(chute,lista_palavra_secreta) == 1:
             pass
         else:
             tentativas -= 1
@@ -111,9 +111,9 @@ def RealizaChute():
 def Acertou(chute,lista_palavra_secreta):
     for i in lista_palavra_secreta:
         if chute == i:
-            return True
-        else:
-            return False
+            return 1
+        #else:
+        #    return 0
     
 
 def VerificaAcerto(chute,lista_palavra_secreta):
